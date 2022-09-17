@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./assets/Fundo.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #121214;
+}
+
+header {
+  margin-top: 32px;
+}
+
+header div {
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50.52%,
+    #e2d45c 100%
+  );
+  margin: auto;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  padding: 4px;
+  display: flex;
+  transition: transform 0.3s;
+  animation: headeranimation 1s 2s backwards;
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header img {
+  border-radius: 50%;
+  width: 100%
+}
+
+main * {
+  line-height: 160%;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  list-style: none;
+}
+
+main {
+  max-width: 580px;
+  width: 90%;
+  margin: 32px auto;
+  display: grid;
+  gap: 24px;
+}
+
+section {
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50.52%,
+    #e2d45c 100%
+  );
+  padding-top: 4px;
+  border-radius: 10px;
+}
+
+main section {
+  animation: mainanimationleft 1s 0.4s backwards;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0.3;
+  
+}
+
+main section:nth-child(2) {
+  animation: mainanimationright 1s 0.9s backwards;
+  
+}
+
+main section:nth-child(3) {
+  animation-delay: 1.4s;
+  
+}
+
+section div {
+  padding: 24px 32px 32px;
+  background: #2a2634;
+  border-radius: 8px;
+}
+
+section h2 {
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: -0.47;
+}
+
+section p {
+  font-weight: 400;
+  letter-spacing: -0.18px;
+  color: #a1a1aa;
+  font-size: 16px;
+}
+
+section ul {
+  display: flex;
+  gap: 16px;
+  padding-top: 24px;
+  flex-wrap: wrap;
+}
+
+section ul li {
+  transition: transform 0.3s;
+}
+
+section ul li:hover {
+  transform: scale(1.1);
+}
+
+.games-list img {
+  width: 90px;
+  border-radius: 8px;
+}
+
+.streamer-list img {
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+@keyframes headeranimation {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes mainanimationleft {
+  from {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes mainanimationright {
+  from {
+    transform: translate(60px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
