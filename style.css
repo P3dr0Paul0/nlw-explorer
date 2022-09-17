@@ -133,6 +133,11 @@ section ul li:hover {
   border: 2px solid black;
 }
 
+.icons {
+  background-color: white;
+  z-index: -1;
+}
+
 @keyframes headeranimation {
   from {
     transform: translateY(-30px);
